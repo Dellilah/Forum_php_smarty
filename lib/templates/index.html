@@ -1,0 +1,31 @@
+{*
+    
+      Layout aplikacji.
+     
+      @package index.tpl
+      @author Alicja Cyganiewicz
+      @link http://www.wierzba.wzks.uj.edu.pl/~09_cyganiewicz/php/Projekt_PHP
+    
+*}
+
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>FORUM</title>
+    </head>
+    <body bgcolor="#CCFFFF">
+        <div id="naglowek" style="text-align: center; font-size: 200%"><a href="glowna_watki.php"> Forum Mieszane </a></div>
+        <div id="menu" bgcolor="#C2DFFF">
+			{include file="menu.tpl"}
+		</div>
+        <div id="tresc">
+            {if $zawartosc}
+                {include file="$zawartosc.tpl"}
+			{else}
+				{include file="404.tpl"}
+			{/if}
+        </div>
+        <div id="stopka"></div>
+    </body>
+</html>
